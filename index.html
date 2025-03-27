@@ -35,6 +35,12 @@
         width: 100%;
         font-family: var(--font-serif);
       }
+
+      @media (max-width: 1023px) {
+        .main-section {
+          padding: 0rem 1rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -69,10 +75,10 @@
       </section>
       <section id="section-2" class="max-lg:overflow-x-auto">
         <div
-          class="prose prose-xl relative flex aspect-[1/0.7] size-full max-w-full bg-[url('./assets/空拍.jpg')] bg-cover bg-center bg-no-repeat max-lg:min-w-[1200px]"
+          class="relative flex aspect-[1/0.7] size-full max-w-full bg-[url('./assets/空拍.jpg')] bg-cover bg-center bg-no-repeat max-lg:min-w-[1200px]"
         >
           <h2
-            class="sticky left-0 top-0 mt-20 w-dvw text-center font-extrabold text-white lg:mt-36"
+            class="sticky left-0 top-0 mt-20 w-dvw text-center text-4xl font-extrabold text-white lg:mt-36"
           >
             宜蘭東區 地王首席
           </h2>
@@ -80,25 +86,46 @@
       </section>
       <section
         id="section-3"
-        class="grid w-full bg-[url('./assets/bg.png')] p-4 lg:grid-cols-2"
+        class="prose prose-lg main-section grid w-full bg-[url('./assets/bg.png')] lg:grid-cols-2"
       >
-        <div class="prose prose-xl col-span-1 max-w-full">
+        <div class="col-span-1 max-w-full">
           <h2
-            class="flex items-end font-extrabold after:w-20 after:border-b-4 after:border-[var(--main-color)] after:content-['']"
+            class="flex flex-wrap items-end after:mt-8 after:w-full after:border-b-4 after:border-[var(--main-color)] after:content-['']"
           >
             百億宜蘭讚BOT <br />未來新都心特區
           </h2>
-          <p>
+          <p class="">
             夏都集團百億建設落地，15000坪都心造鎮，宜蘭東區翻轉崛起！卡位蘭陽新核心，預約繁榮都會新紀元。
           </p>
         </div>
-        <img
-          src="./assets//BOT路網.png"
-          alt=""
-          class="col-span-1 lg:order-first"
-        />
+        <div>
+          <img src="./assets/hotel.jpg" alt="夏都國際溫泉酒店" />
+          <h3 class="text-[var(--main-color)]">
+            夏都國際溫泉酒店（預計2029年完工）
+          </h3>
+          <p>
+            175間奢華客房，融合溫泉療癒與頂級旅宿，匯聚國際商務與渡假風華，定義宜蘭高端旅遊新典範。
+          </p>
+        </div>
+        <div>
+          <img src="./assets/路網.png" alt="" />
+          <h3 class="text-[var(--main-color)]">Magnificent Project</h3>
+        </div>
       </section>
     </main>
+    <section
+      id="section-4"
+      class="prose prose-lg main-section bg-[url('./assets/bg.png')]"
+    >
+      <h2>交通醫療雙核⼼ <br />⾸富⽣活蛋⿈區</h2>
+      <p>
+        蘭陽大都會核心，唯一精品級地段。台鐵高架化、高鐵、陽大2期…建設持續升級，「皇程首賦」一站匯集。
+      </p>
+      <div>123</div>
+    </section>
+    <section id="section-5" class="overflow-x-auto">
+      <img src="./assets/子網-05.jpg" alt="" class="max-lg:min-w-[1200px]" />
+    </section>
     <footer></footer>
   </body>
 </html>
