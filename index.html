@@ -47,10 +47,6 @@
         font-family: var(--font-serif);
       }
 
-      .main-section {
-        padding: 3rem 1rem;
-      }
-
       .animate-fade {
         animation-name: fade-lr;
         animation-duration: 3s;
@@ -79,19 +75,25 @@
         }
       }
 
+      .main-section {
+        padding: 3rem 1rem;
+      }
+
       @media (min-width: 1024px) {
         .main-section {
           padding: 6rem 8rem;
         }
       }
 
+      @media (min-width: 1280px) {
+        .text-vertical {
+          writing-mode: vertical-rl;
+        }
+      }
+
       @media (min-width: 1536px) {
         .main-section {
           padding: 10rem;
-        }
-
-        .text-vertical {
-          writing-mode: vertical-rl;
         }
       }
     </style>
@@ -104,7 +106,7 @@
     <main class="max-w-full overflow-hidden">
       <section
         id="section-1"
-        class="relative flex min-h-screen items-center justify-center overflow-hidden bg-[url('./assets/img/main-bg.webp')] bg-cover bg-[50%_0%] bg-no-repeat 2xl:justify-end 2xl:pe-[15dvw]"
+        class="relative flex min-h-screen items-center justify-center overflow-hidden bg-[url('./assets/img/main-bg.webp')] bg-cover bg-[50%_0%] bg-no-repeat xl:justify-end xl:pe-[15dvw]"
       >
         <img
           src="./assets/img/curtain.webp"
@@ -112,41 +114,47 @@
           data-aos="fade-right"
           data-aos-delay="500"
           data-aos-anchor="#section-1"
-          class="absolute bottom-[-16dvh] left-[-10dvw] min-h-screen scale-125 object-cover opacity-60 2xl:bottom-[-12vh] 2xl:left-[-25dvw] 2xl:top-[-20dvh] 2xl:scale-90 2xl:opacity-100"
+          class="absolute bottom-[-10dvh] min-h-screen scale-125 object-cover opacity-60 xl:bottom-[-12vh] xl:left-[-25dvw] xl:top-[-20dvh] xl:scale-90 xl:opacity-100"
         />
         <div
-          data-aos="fade-up"
-          data-aos-delay="500"
-          data-aos-anchor="#section-1"
-          class="relative z-10 mx-4 flex max-h-screen max-w-full flex-col items-center justify-center rounded-md bg-black/25 px-10 py-20 lg:w-3/4 lg:px-16 lg:py-20 2xl:mx-0 2xl:w-[600px] 2xl:bg-red-300 2xl:bg-transparent 2xl:p-0"
+          class="relative z-10 mx-4 flex max-h-screen max-w-full flex-col items-center justify-center px-10 py-20 lg:w-3/4 lg:px-16 lg:py-20 xl:mx-0 xl:w-[400px] xl:p-0 2xl:w-[550px]"
         >
           <img
+            data-aos="fade"
+            data-aos-delay="500"
+            data-aos-anchor="#section-1"
             src="./assets/img/家徽.svg"
-            alt="logo"
-            class="mb-16 w-full object-cover 2xl:w-1/2"
+            alt="家徽"
+            class="mb-16 w-full object-cover xl:w-1/2"
           />
           <img
-            src="./assets/img/主視覺案名.svg"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-anchor="#section-1"
+            src="./assets/img/皇程首賦.svg"
             alt="皇程首賦"
             class="mb-10 w-full object-cover"
           />
           <img
-            src="./assets/img/主視覺副標.svg"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-anchor="#section-1"
+            src="./assets/img/東區地王.svg"
             alt="訂簽6%｜東區地王 百億計劃"
             class="w-full object-cover"
           />
         </div>
       </section>
 
-      <section id="section-2" class="overflow-x-auto 2xl:overflow-hidden">
+      <section id="section-2" class="overflow-x-auto xl:overflow-hidden">
         <div
-          class="relative flex aspect-[1/0.7] size-full min-w-[1200px] max-w-full bg-[url('./assets/img/空拍.webp')] bg-cover bg-center bg-no-repeat lg:min-w-[2000px] 2xl:min-w-[unset]"
+          class="relative flex aspect-[1/0.7] size-full min-w-[1200px] max-w-full bg-[url('./assets/img/空拍.webp')] bg-cover bg-center bg-no-repeat lg:min-w-[2000px] xl:min-w-[unset]"
         >
           <h2
             data-aos="fade-up"
             data-aos-delay="300"
             data-aos-anchor="#section-2"
-            class="sticky left-0 top-0 mt-20 w-dvw text-center text-4xl font-bold text-white 2xl:mt-32 2xl:text-[5rem]"
+            class="sticky left-0 top-0 mt-20 w-dvw text-center text-4xl font-bold text-white xl:mt-20 xl:text-[4rem]"
           >
             宜蘭東區 地王首席
           </h2>
@@ -164,7 +172,7 @@
 
       <section
         id="section-3"
-        class="main-section space-y-10 bg-[url('./assets/img/bg.webp')] lg:space-y-16 xl:grid-cols-2 2xl:grid 2xl:gap-x-48 2xl:space-y-0"
+        class="main-section space-y-6 bg-[url('./assets/img/bg.webp')] lg:space-y-16 xl:grid xl:grid-cols-2 xl:place-items-stretch xl:gap-x-20 xl:space-y-0"
       >
         <div
           data-aos="fade-up"
@@ -174,58 +182,70 @@
         >
           <div>
             <h2
-              class="flex flex-wrap items-end text-4xl font-bold leading-snug after:my-6 after:w-full after:border-b-4 after:border-[var(--sub-color)] after:content-[''] 2xl:flex-nowrap 2xl:justify-between 2xl:text-6xl 2xl:leading-snug 2xl:after:w-1/5"
+              class="flex flex-wrap items-end text-[2.5rem] font-bold leading-snug after:my-6 after:w-full after:border-b-4 after:border-[var(--sub-color)] after:content-[''] lg:text-5xl xl:flex-nowrap xl:justify-between xl:leading-snug xl:after:w-1/5"
             >
               百億宜蘭讚BOT<br />未來新都心特區
             </h2>
-            <p class="text-xl 2xl:my-10 2xl:text-[22px] 2xl:leading-loose">
+            <p class="xl:my-6 xl:leading-loose">
               夏都集團百億建設落地，15000坪都心造鎮，宜蘭東區翻轉崛起！卡位蘭陽新核心，預約繁榮都會新紀元。
             </p>
           </div>
-          <div id="swiper-1" class="swiper mt-6 2xl:mt-0">
+          <div id="swiper-1" class="swiper mt-6 xl:mt-0">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
+              <div class="swiper-slide relative">
                 <img
                   src="./assets/img/hotel.webp"
                   alt="夏都國際溫泉酒店"
                   class="aspect-[5/3] object-cover"
                 />
+                <span class="absolute bottom-0 right-0 p-1 text-white">
+                  國際酒店示意
+                </span>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide relative">
                 <img
                   src="./assets/img/榮民文化展覽館.webp"
                   alt="榮民文化展覽館"
                   class="aspect-[5/3] object-cover"
                   loading="lazy"
                 />
+                <span class="absolute bottom-0 right-0 p-1 text-white">
+                  文化展館示意
+                </span>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide relative">
                 <img
                   src="./assets/img/台北京站.webp"
                   alt="台北京站"
                   class="aspect-[5/3] object-cover"
                   loading="lazy"
                 />
+                <span class="absolute bottom-0 right-0 p-1 text-white">
+                  京站時尚廣場示意
+                </span>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide relative">
                 <img
                   src="./assets/img/AI長照園區.webp"
-                  alt="AI長照園區"
+                  alt="陽大AI智慧長照園區"
                   class="aspect-[5/3] object-cover"
                   loading="lazy"
                 />
+                <span class="absolute bottom-0 right-0 p-1 text-white">
+                  陽大AI智慧長照園區示意
+                </span>
               </div>
             </div>
           </div>
           <button
             id="swiper-1-next"
-            class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)] 2xl:text-2xl"
+            class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)]"
           >
             <span>More</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 65.24 11.57"
-              class="w-[40px] 2xl:w-[60px]"
+              class="w-[40px] xl:w-[50px]"
             >
               <defs>
                 <style>
@@ -248,34 +268,34 @@
             </svg>
           </button>
           <div class="swiper-1-slide-content mt-6">
-            <h3 class="mt-6 text-2xl text-[var(--main-color)] 2xl:text-3xl">
+            <h3 class="mt-6 text-2xl text-[var(--main-color)]">
               夏都國際溫泉酒店（預計2029年完工）
             </h3>
-            <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+            <p class="py-3 max-md:min-h-[96px] xl:pb-0 xl:leading-loose">
               175間奢華客房，融合溫泉療癒與頂級旅宿，匯聚國際商務與渡假風華，定義宜蘭高端旅遊新典範。
             </p>
           </div>
           <div class="swiper-1-slide-content mt-6" style="display: none">
-            <h3 class="mt-6 text-2xl text-[var(--main-color)] 2xl:text-3xl">
+            <h3 class="mt-6 text-2xl text-[var(--main-color)]">
               榮民文化展館（預計2029年完工）
             </h3>
-            <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+            <p class="py-3 max-md:min-h-[96px] xl:pb-0 xl:leading-loose">
               融合文史教育、藝術展演、觀光機能；在繁華都會中心，珍藏一座人文島嶼，講述專屬宜蘭的文化故事。
             </p>
           </div>
           <div class="swiper-1-slide-content mt-6" style="display: none">
-            <h3 class="mt-6 text-2xl text-[var(--main-color)] 2xl:text-3xl">
+            <h3 class="mt-6 text-2xl text-[var(--main-color)]">
               京站時尚廣場（預計2034年完工）
             </h3>
-            <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+            <p class="py-3 max-md:min-h-[96px] xl:pb-0 xl:leading-loose">
               京站進駐夏都酒店1~3樓，規劃約8,000坪商場，集國際品牌、美食與娛樂，集客蘭城全新商圈核心。
             </p>
           </div>
           <div class="swiper-1-slide-content mt-6" style="display: none">
-            <h3 class="mt-6 text-2xl text-[var(--main-color)] 2xl:text-3xl">
-              AI智慧長照園區（預計2034年完工）
+            <h3 class="mt-6 text-2xl text-[var(--main-color)]">
+              陽大AI智慧長照園區（預計2034年完工）
             </h3>
-            <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+            <p class="py-3 xl:pb-0 xl:leading-loose">
               夏都集團攜手陽大醫院，打造千戶「智慧養生宅」與「智慧醫養旅館」，結合AI健康科技與長照服務。
             </p>
           </div>
@@ -284,11 +304,11 @@
           data-aos="fade-right"
           data-aos-delay="300"
           data-aos-anchor="#section-3"
-          class="relative col-span-1 2xl:order-first 2xl:py-20"
+          class="relative col-span-1 xl:order-first xl:pt-20"
         >
           <img src="./assets/img/路網.webp" alt="路網" />
           <h3
-            class="absolute bottom-0 right-0 text-end text-2xl font-thin text-[var(--main-color)] 2xl:text-4xl 2xl:leading-snug"
+            class="absolute bottom-0 right-0 text-end text-2xl font-thin text-[var(--main-color)] xl:text-4xl xl:leading-snug"
           >
             Magnificent<br />Project
           </h3>
@@ -304,7 +324,7 @@
             data-aos="fade-up"
             data-aos-delay="300"
             data-aos-anchor="#section-4"
-            class="flex flex-wrap items-start text-4xl font-bold leading-snug xl:justify-center 2xl:flex-nowrap 2xl:text-6xl 2xl:leading-snug"
+            class="flex flex-wrap items-start text-[2.5rem] font-bold leading-snug lg:text-5xl xl:flex-nowrap xl:justify-center xl:leading-snug"
           >
             交通醫療雙核⼼ <br class="xl:hidden" />⾸富⽣活蛋⿈區
           </h2>
@@ -312,7 +332,7 @@
             data-aos="fade-left"
             data-aos-delay="500"
             data-aos-anchor="#section-4"
-            class="right-0 top-0 mt-4 text-2xl font-thin text-[var(--main-color)] lg:absolute 2xl:right-[-5dvw] 2xl:top-[5dvh] 2xl:text-end 2xl:text-4xl 2xl:leading-snug"
+            class="right-0 top-0 mt-4 text-2xl font-thin text-[var(--main-color)] lg:absolute xl:right-[-7dvw] xl:top-[5dvh] xl:text-end xl:text-4xl xl:leading-snug 2xl:right-[-5dvw]"
           >
             Deluxe <br class="hidden lg:inline" />Lifestyle
           </div>
@@ -320,53 +340,57 @@
             data-aos="fade-top"
             data-aos-delay="700"
             data-aos-anchor="#section-4"
-            class="my-6 w-full border-b-4 border-[var(--sub-color)] xl:absolute xl:left-0 xl:top-0 2xl:w-[10%]"
+            class="my-6 w-full border-b-4 border-[var(--sub-color)] xl:absolute xl:left-0 xl:top-0 xl:w-[10%]"
           ></div>
         </div>
         <p
           data-aos="fade-top"
           data-aos-delay="900"
           data-aos-anchor="#section-4"
-          class="text-xl 2xl:mt-4 2xl:text-center 2xl:text-[22px] 2xl:leading-loose"
+          class="xl:mt-4 xl:text-center xl:leading-loose"
         >
           蘭陽大都會核心，唯一精品級地段。台鐵高架化、高鐵、陽大2期…建設持續升級，「皇程首賦」一站匯集。
         </p>
         <div
-          class="mt-10 space-y-10 lg:space-y-16 2xl:mt-28 2xl:grid 2xl:grid-cols-2 2xl:gap-28 2xl:space-y-0"
+          class="mt-10 space-y-6 lg:space-y-16 xl:mt-28 xl:grid xl:grid-cols-2 xl:gap-x-20 xl:gap-y-16 xl:space-y-0"
         >
           <div
             data-aos="fade-right"
             data-aos-delay="500"
             data-aos-anchor="#section-4"
           >
-            <div id="swiper-2" class="swiper mt-6 2xl:mt-0">
+            <div id="swiper-2" class="swiper mt-6 xl:mt-0">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide relative">
                   <img
                     src="./assets/img/宜蘭車站.webp"
                     alt="宜蘭車站"
                     class="aspect-[5/3] object-center"
                   />
+                  <span class="absolute bottom-0 left-0 p-1">宜蘭車站</span>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide relative">
                   <img
                     src="./assets/img/台鐵高架化.webp"
                     alt="台鐵高架化"
                     class="aspect-[5/3] object-cover"
                     loading="lazy"
                   />
+                  <span class="absolute bottom-0 left-0 p-1 text-white">
+                    台鐵高架化示意
+                  </span>
                 </div>
               </div>
             </div>
             <button
               id="swiper-2-next"
-              class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)] 2xl:text-2xl"
+              class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)]"
             >
               <span>More</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 65.24 11.57"
-                class="w-[40px] 2xl:w-[60px]"
+                class="w-[40px] xl:w-[50px]"
               >
                 <defs>
                   <style>
@@ -389,18 +413,16 @@
               </svg>
             </button>
             <div class="swiper-2-slide-content mt-6">
-              <h3 class="text-2xl text-[var(--main-color)] 2xl:text-3xl">
-                宜蘭火車站450米
-              </h3>
-              <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+              <h3 class="text-2xl text-[var(--main-color)]">宜蘭火車站450米</h3>
+              <p class="py-3 text-lg xl:pb-0 xl:leading-loose">
                 ⽩強號約70分鐘達南港，全台路網無縫接軌，移動⾃由無遠弗届。
               </p>
             </div>
             <div class="swiper-2-slide-content mt-6" style="display: none">
-              <h3 class="text-2xl text-[var(--main-color)] 2xl:text-3xl">
+              <h3 class="text-2xl text-[var(--main-color)]">
                 台鐵高架化（預計2034年完工）
               </h3>
-              <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+              <p class="py-3 text-lg xl:pb-0 xl:leading-loose">
                 縫合鐵道兩側，貫通宜蘭東、西兩區交通動脈，商圈共榮開展大城格局。
               </p>
             </div>
@@ -410,34 +432,40 @@
             data-aos-delay="700"
             data-aos-anchor="#section-4"
           >
-            <div id="swiper-3" class="swiper mt-6 2xl:mt-0">
+            <div id="swiper-3" class="swiper mt-6 xl:mt-0">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide relative">
                   <img
                     src="./assets/img/宜蘭轉運站.webp"
                     alt="宜蘭轉運站"
-                    class="aspect-[5/3] object-center"
+                    class="aspect-[5/3] object-cover object-center"
                   />
+                  <span class="absolute bottom-0 right-0 p-1 text-white">
+                    宜蘭轉運站
+                  </span>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide relative">
                   <img
                     src="./assets/img/高鐵宜蘭.webp"
                     alt="高鐵宜蘭"
-                    class="aspect-[5/3] object-cover"
+                    class="aspect-[5/3] object-cover object-center"
                     loading="lazy"
                   />
+                  <span class="absolute bottom-0 right-0 p-1">
+                    高鐵宜蘭示意
+                  </span>
                 </div>
               </div>
             </div>
             <button
               id="swiper-3-next"
-              class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)] 2xl:text-2xl"
+              class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)]"
             >
               <span>More</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 65.24 11.57"
-                class="w-[40px] 2xl:w-[60px]"
+                class="w-[40px] xl:w-[50px]"
               >
                 <defs>
                   <style>
@@ -460,20 +488,16 @@
               </svg>
             </button>
             <div class="swiper-3-slide-content mt-6">
-              <h3 class="text-2xl text-[var(--main-color)] 2xl:text-3xl">
-                宜蘭轉運站950米
-              </h3>
-              <p
-                class="py-3 text-xl 2xl:min-h-[112px] 2xl:text-[22px] 2xl:leading-loose"
-              >
+              <h3 class="text-2xl text-[var(--main-color)]">宜蘭轉運站750米</h3>
+              <p class="min-h-[96px] py-3 xl:pb-0 xl:leading-loose">
                 匯集國道與地⽅客運總站，可直達雙北、桃園機場、梨山、南⽅澳等
               </p>
             </div>
             <div class="swiper-3-slide-content mt-6" style="display: none">
-              <h3 class="text-2xl text-[var(--main-color)] 2xl:text-3xl">
+              <h3 class="text-2xl text-[var(--main-color)]">
                 高鐵宜蘭站（預計2036年完工）
               </h3>
-              <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+              <p class="min-h-[96px] py-3 xl:pb-0 xl:leading-loose">
                 車程僅10分鐘即可抵達宜蘭高鐵站，未來宜蘭至台北僅需約20分鐘，串連全台一日生活圈，地利價值躍進升等。
               </p>
             </div>
@@ -483,15 +507,18 @@
             data-aos-delay="900"
             data-aos-anchor="#section-4"
           >
-            <img
-              src="./assets/img/陽明交通⼤學附設醫院-蘭陽院區.webp"
-              alt="陽明交通⼤學附設醫院-蘭陽院區"
-              class="aspect-[5/3] object-center"
-            />
-            <h3 class="mt-6 text-2xl text-[var(--main-color)] 2xl:text-3xl">
+            <div class="relative">
+              <img
+                src="./assets/img/陽明交通⼤學附設醫院-蘭陽院區.webp"
+                alt="陽明交通⼤學附設醫院-蘭陽院區"
+                class="aspect-[5/3] object-center"
+              />
+              <span class="absolute bottom-0 left-0 p-1">陽大醫院</span>
+            </div>
+            <h3 class="mt-6 text-2xl text-[var(--main-color)]">
               陽⼤醫院蘭陽分院
             </h3>
-            <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+            <p class="min-h-[96px] py-3 xl:pb-0 xl:leading-loose">
               溪北⾸席區域教學級醫院，完善醫療資源，提供全⽅位專業照護
             </p>
           </div>
@@ -500,15 +527,20 @@
             data-aos-delay="1200"
             data-aos-anchor="#section-4"
           >
-            <img
-              src="./assets/img/陽⼤醫院蘭陽分院⼆期.webp"
-              alt="陽⼤醫院蘭陽分院⼆期"
-              class="aspect-[5/3] object-center"
-            />
-            <h3 class="mt-6 text-2xl text-[var(--main-color)] 2xl:text-3xl">
+            <div class="relative">
+              <img
+                src="./assets/img/陽⼤醫院蘭陽分院⼆期.webp"
+                alt="陽⼤醫院蘭陽分院⼆期"
+                class="aspect-[5/3] object-center"
+              />
+              <span class="absolute bottom-0 right-0 p-1 text-white">
+                陽大醫院
+              </span>
+            </div>
+            <h3 class="mt-6 text-2xl text-[var(--main-color)]">
               陽⼤醫院蘭陽分院⼆期擴建（預計2027年）
             </h3>
-            <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+            <p class="min-h-[96px] py-3 xl:pb-0 xl:leading-loose">
               新增醫療⼤樓、引進尖端設備、設置直升機停機坪，醫療服務再升級
             </p>
           </div>
@@ -517,24 +549,26 @@
 
       <section
         id="section-5"
-        class="relative overflow-x-auto bg-[url('./assets/img/bg.webp')]"
+        class="overflow-x-auto bg-[url('./assets/img/bg.webp')]"
       >
-        <img
-          data-aos="fade"
-          data-aos-delay="300"
-          data-aos-anchor="#section-5"
-          src="./assets/img/地圖.webp"
-          alt="地圖"
-          class="min-w-[1200px]"
-        />
-        <div
-          class="mask absolute left-0 top-0 z-10 size-full overscroll-contain bg-black/30 lg:hidden"
-        >
+        <div class="relative size-full min-w-[1200px]">
           <img
-            src="./assets/img/swipe.svg"
-            alt="左右滑動"
-            class="animate-fade sticky left-1/2 top-1/2 size-16 -translate-x-1/2 -translate-y-1/2"
+            data-aos="fade"
+            data-aos-delay="300"
+            data-aos-anchor="#section-5"
+            src="./assets/img/地圖.webp"
+            alt="地圖"
+            class="min-w-[1200px]"
           />
+          <div
+            class="mask absolute left-0 top-0 z-10 size-full overscroll-contain bg-black/30 lg:hidden"
+          >
+            <img
+              src="./assets/img/swipe.svg"
+              alt="左右滑動"
+              class="animate-fade sticky left-1/2 top-1/2 size-16 -translate-x-1/2 -translate-y-1/2"
+            />
+          </div>
         </div>
       </section>
 
@@ -544,7 +578,7 @@
             data-aos="fade-up"
             data-aos-delay="300"
             data-aos-anchor="#section-6"
-            class="flex flex-wrap items-start text-4xl font-bold leading-snug xl:justify-center 2xl:flex-nowrap 2xl:text-6xl 2xl:leading-snug"
+            class="flex flex-wrap items-start text-[2.5rem] font-bold leading-snug lg:text-5xl xl:flex-nowrap xl:justify-center xl:leading-snug"
           >
             菁英薈萃優生學 <br class="xl:hidden" />便利繁榮任悠遊
           </h2>
@@ -552,14 +586,14 @@
             data-aos="fade-right"
             data-aos-delay="500"
             data-aos-anchor="#section-6"
-            class="my-6 w-full border-b-4 border-[var(--sub-color)] xl:absolute xl:left-0 xl:top-0 2xl:w-[10%]"
+            class="my-6 w-full border-b-4 border-[var(--sub-color)] xl:absolute xl:left-0 xl:top-0 xl:w-[10%]"
           ></div>
         </div>
         <p
           data-aos="fade-up"
           data-aos-delay="700"
           data-aos-anchor="#section-6"
-          class="text-xl 2xl:mt-4 2xl:text-center 2xl:text-[22px] 2xl:leading-loose"
+          class="xl:mt-4 xl:text-center xl:leading-loose"
         >
           優雅宜蘭東區，商圈機能齊全，日常所需近在咫尺！近擁車站、醫院無價地利，悠享學府比鄰人文住宅區
         </p>
@@ -567,48 +601,57 @@
           data-aos="fade-right"
           data-aos-delay="900"
           data-aos-anchor="#section-6"
-          class="space-y-10 lg:space-y-16 2xl:space-y-6"
+          class="space-y-10 lg:space-y-16 xl:space-y-6"
         >
           <div
-            class="mt-10 2xl:mt-28 2xl:grid 2xl:grid-cols-11 2xl:place-items-center 2xl:gap-28"
+            class="mt-10 xl:mt-20 xl:grid xl:grid-cols-11 xl:place-items-center xl:gap-28"
           >
-            <div class="max-w-full 2xl:col-span-6">
+            <div class="max-w-full xl:col-span-6">
               <div id="swiper-4" class="swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
+                  <div class="swiper-slide relative">
                     <img
                       src="./assets/img/宜蘭⾼商.webp"
                       alt="宜蘭⾼商"
                       class="aspect-[5/3] object-cover"
                     />
+                    <span class="absolute bottom-0 left-0 p-1 text-white">
+                      宜蘭⾼商
+                    </span>
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide relative">
                     <img
                       src="./assets/img/中華國中.webp"
                       alt="中華國中"
                       class="aspect-[5/3] object-cover"
                       loading="lazy"
                     />
+                    <span class="absolute bottom-0 left-0 p-1 text-white">
+                      中華國中
+                    </span>
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide relative">
                     <img
                       src="./assets/img/黎民國⼩.webp"
                       alt="黎民國⼩"
                       class="aspect-[5/3] object-cover"
                       loading="lazy"
                     />
+                    <span class="absolute bottom-0 left-0 p-1 text-white">
+                      黎民國⼩
+                    </span>
                   </div>
                 </div>
               </div>
               <button
                 id="swiper-4-next"
-                class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)] 2xl:text-2xl"
+                class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)]"
               >
                 <span>More</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 65.24 11.57"
-                  class="w-[40px] 2xl:w-[60px]"
+                  class="w-[40px] xl:w-[50px]"
                 >
                   <defs>
                     <style>
@@ -631,18 +674,16 @@
                 </svg>
               </button>
             </div>
-            <div class="2xl:col-span-5">
+            <div class="xl:col-span-5 xl:pr-28">
               <h3
-                class="mb-3 mt-6 text-2xl font-thin text-[var(--main-color)] 2xl:mb-16 2xl:mt-0 2xl:text-3xl"
+                class="mb-3 mt-6 text-2xl font-thin text-[var(--main-color)] xl:mb-16 xl:mt-0"
               >
                 Metropolitan Elite
               </h3>
-              <h4
-                class="text-2xl text-[var(--main-color)] 2xl:mb-2 2xl:text-3xl"
-              >
+              <h4 class="text-2xl text-[var(--main-color)]">
                 優質學區相伴成長同⾏
               </h4>
-              <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+              <p class="py-3 xl:leading-loose">
                 黎明國⼩、中華國中、宜蘭⾼商，名校環伺，串連完整教育資源穩固孩⼦的學習基礎
               </p>
             </div>
@@ -651,45 +692,52 @@
             data-aos="fade-left"
             data-aos-delay="900"
             data-aos-anchor="#section-6"
-            class="2xl:grid 2xl:grid-cols-11 2xl:place-items-center 2xl:gap-28"
+            class="xl:grid xl:grid-cols-11 xl:place-items-center xl:gap-28"
           >
-            <div class="max-w-full 2xl:col-span-6">
+            <div class="max-w-full xl:col-span-6">
               <div id="swiper-5" class="swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
+                  <div class="swiper-slide relative">
                     <img
                       src="./assets/img/金東購物廣場.webp"
                       alt="金東購物廣場"
                       class="aspect-[5/3] object-cover"
                     />
+                    <span class="absolute bottom-0 right-0 p-1"
+                      >金東購物廣場</span
+                    >
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide relative">
                     <img
                       src="./assets/img/東⾨夜市.webp"
                       alt="東⾨夜市"
                       class="aspect-[5/3] object-cover"
                       loading="lazy"
                     />
+                    <span class="absolute bottom-0 right-0 p-1">東⾨夜市</span>
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide relative">
                     <img
                       src="./assets/img/新⽉廣場.webp"
                       alt="新⽉廣場"
                       class="aspect-[5/3] object-cover"
                       loading="lazy"
                     />
+                    <span class="absolute bottom-0 right-0 p-1 text-white">
+                      新⽉廣場
+                    </span>
                   </div>
                 </div>
               </div>
               <button
                 id="swiper-5-next"
-                class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)] 2xl:text-2xl"
+                class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)]"
               >
                 <span>More</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 65.24 11.57"
-                  class="w-[40px] 2xl:w-[60px]"
+                  class="w-[40px] xl:w-[50px]"
                 >
                   <defs>
                     <style>
@@ -712,18 +760,16 @@
                 </svg>
               </button>
             </div>
-            <div class="2xl:order-first 2xl:col-span-5">
+            <div class="xl:order-first xl:col-span-5 xl:pl-28">
               <h3
-                class="mb-3 mt-6 text-2xl font-thin text-[var(--main-color)] 2xl:mb-16 2xl:mt-0 2xl:text-3xl"
+                class="mb-3 mt-6 text-2xl font-thin text-[var(--main-color)] xl:mb-16 xl:mt-0"
               >
                 Comprehensive Enjoying Living
               </h3>
-              <h4
-                class="text-2xl text-[var(--main-color)] 2xl:mb-2 2xl:text-3xl"
-              >
+              <h4 class="text-2xl text-[var(--main-color)]">
                 完善商圈優活近在咫尺
               </h4>
-              <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+              <p class="py-3 xl:leading-loose">
                 夜市、超市、餐飲、商圈俱全，購物採買左右逢源輕鬆無後顧之憂，悠享完善都會機
               </p>
             </div>
@@ -732,45 +778,52 @@
             data-aos="fade-right"
             data-aos-delay="900"
             data-aos-anchor="#section-6"
-            class="2xl:grid 2xl:grid-cols-11 2xl:place-items-center 2xl:gap-28"
+            class="xl:grid xl:grid-cols-11 xl:place-items-center xl:gap-28"
           >
-            <div class="max-w-full 2xl:col-span-6">
+            <div class="max-w-full xl:col-span-6">
               <div id="swiper-6" class="swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
+                  <div class="swiper-slide relative">
                     <img
                       src="./assets/img/宜蘭河濱公園.webp"
                       alt="宜蘭河濱公園"
                       class="aspect-[5/3] object-cover"
                     />
+                    <span class="absolute bottom-0 left-0 p-1 text-white">
+                      宜蘭河濱公園
+                    </span>
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide relative">
                     <img
                       src="./assets/img/幾⽶公園.webp"
                       alt="幾⽶公園"
                       class="aspect-[5/3] object-cover"
                       loading="lazy"
                     />
+                    <span class="absolute bottom-0 left-0 p-1 text-white">
+                      幾⽶公園
+                    </span>
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide relative">
                     <img
                       src="./assets/img/丟丟噹森林.webp"
                       alt="丟丟噹森林"
                       class="aspect-[5/3] object-cover"
                       loading="lazy"
                     />
+                    <span class="absolute bottom-0 left-0 p-1">丟丟噹森林</span>
                   </div>
                 </div>
               </div>
               <button
                 id="swiper-6-next"
-                class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)] 2xl:text-2xl"
+                class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)]"
               >
                 <span>More</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 65.24 11.57"
-                  class="w-[40px] 2xl:w-[60px]"
+                  class="w-[40px] xl:w-[50px]"
                 >
                   <defs>
                     <style>
@@ -793,18 +846,16 @@
                 </svg>
               </button>
             </div>
-            <div class="2xl:col-span-5">
+            <div class="xl:col-span-5 xl:pr-28">
               <h3
-                class="mb-3 mt-6 text-2xl font-thin text-[var(--main-color)] 2xl:mb-16 2xl:mt-0 2xl:text-3xl"
+                class="mb-3 mt-6 text-2xl font-thin text-[var(--main-color)] xl:mb-16 xl:mt-0"
               >
                 Leisurely Greenery
               </h3>
-              <h4
-                class="text-2xl text-[var(--main-color)] 2xl:mb-2 2xl:text-3xl"
-              >
+              <h4 class="text-2xl text-[var(--main-color)]">
                 漫步悠然 都會幸福氧森
               </h4>
-              <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+              <p class="py-3 xl:leading-loose">
                 綠⾊⽣態公園、宜蘭河畔、丟丟噹輕鬆悠遊品味健康⽣活
               </p>
             </div>
@@ -819,14 +870,14 @@
           class="min-h-screen object-cover object-center"
         />
         <div
-          class="absolute inset-0 flex items-center justify-center bg-black/40 tracking-widest text-white 2xl:static 2xl:bg-transparent"
+          class="absolute inset-0 flex items-center justify-center bg-black/40 tracking-widest text-white xl:static xl:bg-transparent"
         >
           <div>
             <h2
               data-aos="fade-up"
               data-aos-delay="300"
               data-aos-anchor="#section-7"
-              class="text-vertical mb-10 text-center text-5xl font-bold lg:mb-16 lg:text-[6rem] 2xl:absolute 2xl:right-[20dvw] 2xl:top-[10dvh] 2xl:text-6xl"
+              class="text-vertical mb-10 text-center text-5xl font-bold lg:mb-16 lg:text-[6rem] xl:absolute xl:right-[22dvw] xl:top-[10dvh] xl:text-5xl"
             >
               非凡地標鉅座
             </h2>
@@ -834,9 +885,9 @@
               data-aos="fade-up"
               data-aos-delay="300"
               data-aos-anchor="#section-7"
-              class="text-center text-3xl lg:text-5xl 2xl:absolute 2xl:left-[20dvw] 2xl:top-[40dvh] 2xl:text-start 2xl:text-4xl 2xl:font-extralight 2xl:leading-snug"
+              class="text-center text-3xl lg:text-5xl xl:absolute xl:left-[20dvw] xl:top-[40dvh] xl:text-start xl:text-4xl xl:font-extralight xl:leading-snug"
             >
-              Master <br class="hidden 2xl:inline" />Architect
+              Master <br class="hidden xl:inline" />Architect
             </p>
           </div>
         </div>
@@ -844,13 +895,13 @@
 
       <section id="section-8" class="main-section">
         <div
-          class="flex flex-col 2xl:flex-row 2xl:items-stretch 2xl:justify-between"
+          class="flex flex-col xl:flex-row xl:items-stretch xl:justify-between"
         >
           <div
             data-aos="fade-right"
             data-aos-anchor="#section-8"
             data-aos-delay="300"
-            class="h-full max-w-full 2xl:flex 2xl:w-[48%] 2xl:flex-col"
+            class="hidden h-full max-w-full xl:flex xl:w-[48%] xl:flex-col 2xl:w-[45%]"
           >
             <div id="swiper-7" class="swiper size-full">
               <div class="swiper-wrapper">
@@ -860,6 +911,9 @@
                     alt="世界灣"
                     class="absolute inset-0 size-full object-cover object-center"
                   />
+                  <span class="absolute bottom-0 left-0 p-1 text-white">
+                    世界灣
+                  </span>
                 </div>
                 <div class="swiper-slide relative aspect-[3/4] size-full">
                   <img
@@ -868,6 +922,9 @@
                     class="absolute inset-0 size-full object-cover object-center"
                     loading="lazy"
                   />
+                  <span class="absolute bottom-0 left-0 p-1 text-white">
+                    建築學人
+                  </span>
                 </div>
                 <div class="swiper-slide relative aspect-[3/4] size-full">
                   <img
@@ -876,6 +933,9 @@
                     class="absolute inset-0 size-full object-cover object-center"
                     loading="lazy"
                   />
+                  <span class="absolute bottom-0 left-0 p-1 text-white">
+                    士科潤山
+                  </span>
                 </div>
                 <div class="swiper-slide relative aspect-[3/4] size-full">
                   <img
@@ -884,6 +944,9 @@
                     class="absolute inset-0 size-full object-cover object-center"
                     loading="lazy"
                   />
+                  <span class="absolute bottom-0 left-0 p-1 text-white">
+                    宏普GRAND PARK
+                  </span>
                 </div>
                 <div class="swiper-slide relative aspect-[3/4] size-full">
                   <img
@@ -892,6 +955,9 @@
                     class="absolute inset-0 size-full object-cover object-center"
                     loading="lazy"
                   />
+                  <span class="absolute bottom-0 left-0 p-1 text-white">
+                    上善如水
+                  </span>
                 </div>
                 <div class="swiper-slide relative aspect-[3/4] size-full">
                   <img
@@ -900,18 +966,21 @@
                     class="absolute inset-0 size-full object-cover object-center"
                     loading="lazy"
                   />
+                  <span class="absolute bottom-0 left-0 p-1 text-white">
+                    友座君碧
+                  </span>
                 </div>
               </div>
             </div>
             <button
               id="swiper-7-next"
-              class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)] 2xl:text-2xl"
+              class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)]"
             >
               <span>More</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 65.24 11.57"
-                class="w-[40px] 2xl:w-[60px]"
+                class="w-[40px] xl:w-[50px]"
               >
                 <defs>
                   <style>
@@ -934,13 +1003,13 @@
               </svg>
             </button>
           </div>
-          <div class="order-first mb-10 2xl:order-last 2xl:w-[45%]">
+          <div class="order-first mb-10 xl:order-last xl:w-[45%]">
             <div class="relative">
               <h2
                 data-aos="fade-left"
                 data-aos-anchor="#section-8"
                 data-aos-delay="300"
-                class="text-4xl font-bold leading-snug 2xl:text-6xl"
+                class="text-[2.5rem] font-bold leading-snug lg:text-5xl"
               >
                 頂尖團隊聚首
               </h2>
@@ -948,13 +1017,13 @@
                 data-aos="fade-left"
                 data-aos-anchor="#section-8"
                 data-aos-delay="500"
-                class="my-6 w-full border-b-4 border-[var(--sub-color)] xl:absolute xl:bottom-0 xl:right-0 2xl:w-[15%]"
+                class="my-6 w-full border-b-4 border-[var(--sub-color)] xl:absolute xl:bottom-0 xl:right-0 xl:my-0 xl:w-[20%]"
               ></div>
               <p
                 data-aos="fade-left"
                 data-aos-anchor="#section-8"
                 data-aos-delay="700"
-                class="text-xl 2xl:mt-4 2xl:text-[22px] 2xl:leading-loose"
+                class="xl:mt-4 xl:leading-loose 2xl:pr-40"
               >
                 皇程團隊，與蕭家福建築大師攜手，傳承「世界灣」豪宅精髓，再創經典地標力作
               </p>
@@ -963,68 +1032,213 @@
               data-aos="fade-left"
               data-aos-anchor="#section-8"
               data-aos-delay="900"
-              class="mt-10 flex flex-col 2xl:flex-row 2xl:items-stretch 2xl:gap-16"
+              class="mt-10 flex flex-col xl:flex-row xl:items-stretch xl:gap-16"
             >
-              <div class="order-last mt-4 2xl:order-first 2xl:w-3/5">
-                <h3
-                  class="mt-6 text-2xl text-[var(--main-color)] 2xl:mt-0 2xl:text-3xl"
-                >
+              <div class="order-last xl:order-first xl:mt-4 xl:w-3/5">
+                <h3 class="mt-6 text-2xl text-[var(--main-color)] xl:mt-0">
                   名宅推手 蕭家福建築師
                 </h3>
-                <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+                <p class="py-3 xl:leading-loose">
                   30年經驗建築名家，作品遍佈國內外，屢獲全國十大建築師殊榮及英國IPA地產大獎。
                 </p>
                 <ul
-                  class="list-none space-y-3 pl-0 2xl:text-xl 2xl:leading-loose [&>li]:flex [&>li]:text-xl [&>li]:before:mr-3 [&>li]:before:mt-3 [&>li]:before:size-3 [&>li]:before:rounded-full [&>li]:before:bg-[var(--main-color)] [&>li]:before:content-[''] 2xl:[&>li]:text-[22px]"
+                  class="hidden list-none space-y-1.5 pl-0 xl:block xl:leading-loose [&>li]:flex [&>li]:before:mr-3 [&>li]:before:mt-3 [&>li]:before:size-3 [&>li]:before:rounded-full [&>li]:before:bg-[var(--main-color)] [&>li]:before:content-['']"
                 >
                   <li>弘程世界灣（頭城鎮）</li>
                   <li>士林士科潤山（台北市）</li>
                   <li>建築學人（台北市）</li>
                 </ul>
               </div>
-              <div class="2xl:flex 2xl:w-2/5 2xl:flex-col 2xl:justify-stretch">
+              <div
+                class="order-first xl:order-none xl:flex xl:w-2/5 xl:flex-col xl:justify-stretch"
+              >
                 <img
                   src="./assets/img/蕭家福.webp"
                   alt="建築師 蕭家福"
-                  class="aspect-square object-cover object-center 2xl:aspect-[2/3] 2xl:grow 2xl:object-[60%_0]"
+                  class="aspect-square object-cover object-center xl:aspect-[2/3] xl:grow xl:object-[60%_0]"
                 />
-                <p class="hidden text-end 2xl:block 2xl:text-xl">
-                  建築師 蕭家福
-                </p>
+                <p class="hidden text-end xl:block">建築師 蕭家福</p>
+              </div>
+              <div class="order-last xl:hidden">
+                <div id="swiper-7-1-mobile" class="swiper size-full">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide relative aspect-[3/4] size-full">
+                      <img
+                        src="./assets/img/世界灣.webp"
+                        alt="世界灣"
+                        class="absolute inset-0 size-full object-cover object-center"
+                      />
+                      <span class="absolute bottom-0 left-0 p-1 text-white">
+                        世界灣
+                      </span>
+                    </div>
+                    <div class="swiper-slide relative aspect-[3/4] size-full">
+                      <img
+                        src="./assets/img/建築學人.webp"
+                        alt="建築學人"
+                        class="absolute inset-0 size-full object-cover object-center"
+                        loading="lazy"
+                      />
+                      <span class="absolute bottom-0 left-0 p-1 text-white">
+                        建築學人
+                      </span>
+                    </div>
+                    <div class="swiper-slide relative aspect-[3/4] size-full">
+                      <img
+                        src="./assets/img/士科潤山.webp"
+                        alt="士科潤山"
+                        class="absolute inset-0 size-full object-cover object-center"
+                        loading="lazy"
+                      />
+                      <span class="absolute bottom-0 left-0 p-1 text-white">
+                        士科潤山
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  id="swiper-7-1-mobile-next"
+                  class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)]"
+                >
+                  <span>More</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 65.24 11.57"
+                    class="w-[40px] xl:w-[50px]"
+                  >
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: none;
+                          stroke: #ac826d;
+                          stroke-miterlimit: 10;
+                          stroke-width: 2px;
+                        }
+                      </style>
+                    </defs>
+                    <g id="圖層_2" data-name="圖層 2">
+                      <g id="圖層_1-2" data-name="圖層 1">
+                        <polyline
+                          class="cls-1"
+                          points="0 10.57 63.31 10.57 56.31 0.57"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                </button>
+                <ul
+                  class="mt-4 list-none space-y-1.5 pl-0 xl:hidden xl:leading-loose [&>li]:flex [&>li]:before:mr-3 [&>li]:before:mt-3 [&>li]:before:size-3 [&>li]:before:rounded-full [&>li]:before:bg-[var(--main-color)] [&>li]:before:content-['']"
+                >
+                  <li>弘程世界灣（頭城鎮）</li>
+                  <li>士林士科潤山（台北市）</li>
+                  <li>建築學人（台北市）</li>
+                </ul>
               </div>
             </div>
             <div
               data-aos="fade-left"
               data-aos-anchor="#section-8"
               data-aos-delay="1200"
-              class="mt-10 flex flex-col 2xl:mt-4 2xl:flex-row 2xl:items-stretch 2xl:gap-16"
+              class="mt-16 flex flex-col xl:mt-4 xl:flex-row xl:items-stretch xl:gap-16"
             >
-              <div class="order-last mt-4 2xl:order-first 2xl:w-3/5">
-                <h3
-                  class="mt-6 text-2xl text-[var(--main-color)] 2xl:mt-0 2xl:text-3xl"
-                >
+              <div class="order-last xl:order-first xl:mt-4 xl:w-3/5">
+                <h3 class="mt-6 text-2xl text-[var(--main-color)] xl:mt-0">
                   菁根景觀 心靈美學之境
                 </h3>
-                <p class="py-3 text-xl 2xl:text-[22px] 2xl:leading-loose">
+                <p class="py-3 xl:leading-loose">
                   以「人文、自然、藝術、禪」為核心，造景甦醒感官，調和沈澱心靈，境定如禪富足精神。
                 </p>
                 <ul
-                  class="list-none space-y-3 pl-0 2xl:text-xl 2xl:leading-loose [&>li]:flex [&>li]:text-xl [&>li]:before:mr-3 [&>li]:before:mt-3 [&>li]:before:size-3 [&>li]:before:rounded-full [&>li]:before:bg-[var(--main-color)] [&>li]:before:content-[''] 2xl:[&>li]:text-[22px]"
+                  class="hidden list-none space-y-1.5 pl-0 xl:block xl:leading-loose [&>li]:flex [&>li]:before:mr-3 [&>li]:before:mt-3 [&>li]:before:size-3 [&>li]:before:rounded-full [&>li]:before:bg-[var(--main-color)] [&>li]:before:content-['']"
                 >
                   <li>上善若水（礁溪鄉）</li>
                   <li>友座君碧（台北市）</li>
                   <li>宏普GRAND PARK II（新北市）</li>
                 </ul>
               </div>
-              <div class="2xl:flex 2xl:w-2/5 2xl:flex-col 2xl:justify-stretch">
+              <div class="xl:flex xl:w-2/5 xl:flex-col xl:justify-stretch">
                 <img
                   src="./assets/img/許行研.webp"
                   alt="景觀設計師 許行研"
-                  class="aspect-square object-cover object-center 2xl:aspect-[2/3] 2xl:grow"
+                  class="aspect-square object-cover object-center xl:aspect-[2/3] xl:grow"
                 />
-                <p class="hidden text-end 2xl:block 2xl:text-xl">
-                  景觀設計師 許行研
-                </p>
+                <p class="hidden text-end xl:block">景觀設計師 許行研</p>
+              </div>
+              <div class="order-last xl:hidden">
+                <div id="swiper-7-2-mobile" class="swiper size-full">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide relative aspect-[3/4] size-full">
+                      <img
+                        src="./assets/img/宏普GRAND PARK.webp"
+                        alt="宏普GRAND PARK"
+                        class="absolute inset-0 size-full object-cover object-center"
+                        loading="lazy"
+                      />
+                      <span class="absolute bottom-0 left-0 p-1 text-white">
+                        宏普GRAND PARK
+                      </span>
+                    </div>
+                    <div class="swiper-slide relative aspect-[3/4] size-full">
+                      <img
+                        src="./assets/img/上善如水.webp"
+                        alt="上善如水"
+                        class="absolute inset-0 size-full object-cover object-center"
+                        loading="lazy"
+                      />
+                      <span class="absolute bottom-0 left-0 p-1 text-white">
+                        上善如水
+                      </span>
+                    </div>
+                    <div class="swiper-slide relative aspect-[3/4] size-full">
+                      <img
+                        src="./assets/img/友座君碧.webp"
+                        alt="友座君碧"
+                        class="absolute inset-0 size-full object-cover object-center"
+                        loading="lazy"
+                      />
+                      <span class="absolute bottom-0 left-0 p-1 text-white">
+                        友座君碧
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  id="swiper-7-2-mobile-next"
+                  class="ms-auto mt-4 flex items-center gap-2 text-xl text-[var(--main-color)]"
+                >
+                  <span>More</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 65.24 11.57"
+                    class="w-[40px] xl:w-[50px]"
+                  >
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: none;
+                          stroke: #ac826d;
+                          stroke-miterlimit: 10;
+                          stroke-width: 2px;
+                        }
+                      </style>
+                    </defs>
+                    <g id="圖層_2" data-name="圖層 2">
+                      <g id="圖層_1-2" data-name="圖層 1">
+                        <polyline
+                          class="cls-1"
+                          points="0 10.57 63.31 10.57 56.31 0.57"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                </button>
+                <ul
+                  class="mt-4 list-none space-y-1.5 pl-0 xl:hidden xl:leading-loose [&>li]:flex [&>li]:before:mr-3 [&>li]:before:mt-3 [&>li]:before:size-3 [&>li]:before:rounded-full [&>li]:before:bg-[var(--main-color)] [&>li]:before:content-['']"
+                >
+                  <li>上善若水（礁溪鄉）</li>
+                  <li>友座君碧（台北市）</li>
+                  <li>宏普GRAND PARK II（新北市）</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -1035,30 +1249,30 @@
         id="section-9"
         class="main-section relative mb-16 flex flex-col bg-[url('./assets/img/contact-bg.webp')] bg-cover bg-center bg-no-repeat max-lg:px-6 md:mb-0"
       >
-        <div class="absolute inset-0 bg-black/40 2xl:hidden"></div>
+        <div class="absolute inset-0 bg-black/40 xl:hidden"></div>
         <div
-          class="relative flex flex-col items-center 2xl:flex-row 2xl:items-stretch 2xl:gap-x-40"
+          class="relative flex flex-col items-center xl:flex-row xl:items-stretch xl:gap-x-24 2xl:gap-x-32"
         >
           <div
             data-aos="fade-up"
             data-aos-anchor="#section-9"
             data-aos-delay="300"
-            class="w-full 2xl:order-last 2xl:w-1/2"
+            class="w-full xl:order-last xl:w-1/2"
           >
-            <div class="2xl:flex 2xl:items-center 2xl:gap-x-6">
+            <div class="xl:flex xl:items-center xl:gap-x-6">
               <img
                 src="./assets/img/家徽.svg"
                 alt="logo"
-                class="mx-auto mb-10 max-w-[60%] lg:max-w-[40%] 2xl:mx-0 2xl:mb-0 2xl:max-w-[20%]"
+                class="mx-auto mb-10 max-w-[60%] lg:max-w-[40%] xl:mx-0 xl:mb-0 xl:max-w-[20%]"
               />
               <img
-                src="./assets/img/主視覺案名.svg"
+                src="./assets/img/皇程首賦.svg"
                 alt="皇程首賦"
-                class="w-full object-cover max-2xl:mx-auto lg:max-w-[60%] 2xl:max-w-[50%]"
+                class="w-full object-cover max-xl:mx-auto lg:max-w-[60%] xl:max-w-[50%]"
               />
             </div>
             <ul
-              class="my-10 list-none space-y-4 pl-0 text-center text-xl text-white 2xl:text-start 2xl:text-[22px]"
+              class="my-10 list-none space-y-4 pl-0 text-lg text-white lg:text-center xl:text-start"
             >
               <li>投資興建｜皇程建設股份有限公司</li>
               <li>建築規劃｜蕭家福建築師事務所</li>
@@ -1067,9 +1281,11 @@
               <li>建案類型｜預售屋</li>
               <li>樓層規劃｜14F/B3</li>
               <li>坪數規劃｜25-37坪</li>
+              <li>接待會館｜宜蘭市聖後街53號</li>
+              <li>貴賓專線｜03-9325688</li>
             </ul>
             <iframe
-              class="mb-10 aspect-square w-full lg:aspect-video 2xl:mb-0"
+              class="mb-10 aspect-square w-full lg:aspect-video xl:mb-0"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.0900171492513!2d121.75461397637207!3d24.758102577996183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e4da78470753%3A0xd7b10e0c30e422f5!2zMjYw5a6c6Jit57ij5a6c6Jit5biC6IGW5b6M6KGXNTPomZ8!5e0!3m2!1szh-TW!2stw!4v1743228520001!5m2!1szh-TW!2stw"
               style="border: 0"
               allowfullscreen=""
@@ -1084,15 +1300,15 @@
             data-aos="fade-up"
             data-aos-anchor="#section-9"
             data-aos-delay="300"
-            class="space-y-4 bg-white/80 p-5 lg:w-full lg:p-10 2xl:flex 2xl:w-1/2 2xl:grow 2xl:flex-col 2xl:justify-between"
+            class="space-y-4 bg-white/80 p-5 lg:w-full lg:p-10 xl:flex xl:w-1/2 xl:grow xl:flex-col xl:justify-between"
           >
-            <div class="font-bold 2xl:text-2xl">⽴即預約</div>
+            <div class="font-bold xl:text-xl">⽴即預約</div>
             <div>
               <label for="name" class="sr-only">姓名</label>
               <input
                 id="name"
                 type="text"
-                class="w-full border-0 border-b border-[var(--main-color)] bg-transparent pl-0 placeholder:text-black focus:ring-0 2xl:text-2xl"
+                class="w-full border-0 border-b border-[var(--main-color)] bg-transparent pl-0 placeholder:text-black focus:ring-0 xl:text-xl"
                 placeholder="姓名"
               />
             </div>
@@ -1102,7 +1318,7 @@
                 id="phone"
                 type="tel"
                 inputmode="tel"
-                class="w-full border-0 border-b border-[var(--main-color)] bg-transparent pl-0 placeholder:text-black focus:ring-0 2xl:text-2xl"
+                class="w-full border-0 border-b border-[var(--main-color)] bg-transparent pl-0 placeholder:text-black focus:ring-0 xl:text-xl"
                 placeholder="電話"
               />
             </div>
@@ -1112,13 +1328,13 @@
                 id="verify"
                 type="text"
                 inputmode="numeric"
-                class="w-full border-0 border-b border-[var(--main-color)] bg-transparent pl-0 placeholder:text-black focus:ring-0 2xl:text-2xl"
+                class="w-full border-0 border-b border-[var(--main-color)] bg-transparent pl-0 placeholder:text-black focus:ring-0 xl:text-xl"
                 placeholder="驗證碼"
               />
             </div>
             <button
               type="button"
-              class="w-full bg-[var(--sub-color)] py-2 text-white 2xl:text-2xl"
+              class="w-full bg-[var(--sub-color)] py-2 text-white xl:text-xl"
             >
               取得驗證碼
             </button>
@@ -1128,7 +1344,7 @@
                 id="email"
                 type="email"
                 inputmode="email"
-                class="w-full border-0 border-b border-[var(--main-color)] bg-transparent pl-0 placeholder:text-black focus:ring-0 2xl:text-2xl"
+                class="w-full border-0 border-b border-[var(--main-color)] bg-transparent pl-0 placeholder:text-black focus:ring-0 xl:text-xl"
                 placeholder="電子郵件"
               />
             </div>
@@ -1137,20 +1353,20 @@
             <p class="text-[12px]">
               您所登錄的個⼈資料將做為以下⽤途<br />（⼀）本網站所載之相關事項通知（⼆）客⼾管理與服務（三）本公司⾏銷業務之推廣本案實際內容以現場公布為準
             </p>
-            <div class="flex items-center gap-x-4">
+            <div class="flex items-center gap-x-2 xl:gap-x-4">
               <input
                 type="checkbox"
                 name="confirm"
                 id="confirm"
-                class="scale-150 border-[var(--main-color)] bg-transparent focus:shadow-none focus:ring-0"
+                class="border-[var(--main-color)] bg-transparent focus:shadow-none focus:ring-0 xl:scale-150"
               />
-              <label for="confirm" class="2xl:text-2xl">
+              <label for="confirm" class="xl:text-xl">
                 本⼈已知悉並同意隱私權政策聲明事項
               </label>
             </div>
             <button
               type="submit"
-              class="w-full bg-[var(--sub-color)] py-2 text-white 2xl:text-2xl"
+              class="w-full bg-[var(--sub-color)] py-2 text-white xl:text-xl"
             >
               送出
             </button>
@@ -1230,6 +1446,8 @@
 
     <script>
       $(document).ready(() => {
+        const isMobile = window.innerWidth < 992;
+
         // 初始化 AOS 庫
         AOS.init({
           offset: 200,
@@ -1276,13 +1494,18 @@
         initSwiper("#swiper-4", "#swiper-4-next");
         initSwiper("#swiper-5", "#swiper-5-next");
         initSwiper("#swiper-6", "#swiper-6-next");
-        initSwiper("#swiper-7", "#swiper-7-next");
+        if (!isMobile) {
+          initSwiper("#swiper-7", "#swiper-7-next");
+        } else {
+          initSwiper("#swiper-7-1-mobile", "#swiper-7-1-mobile-next");
+          initSwiper("#swiper-7-2-mobile", "#swiper-7-1-mobile-next");
+        }
 
         $("#form").twzipcode({
           zipcodeIntoDistrict: true,
           css: [
-            "county form-select w-full border-0 border-b border-[var(--main-color)] bg-transparent focus:ring-0 placeholder:text-black px-0 2xl:text-2xl",
-            "district form-select w-full border-0 border-b border-[var(--main-color)] bg-transparent focus:ring-0 placeholder:text-black px-0 2xl:text-2xl",
+            "county form-select w-full border-0 border-b border-[var(--main-color)] bg-transparent focus:ring-0 placeholder:text-black px-0 xl:text-xl",
+            "district form-select w-full border-0 border-b border-[var(--main-color)] bg-transparent focus:ring-0 placeholder:text-black px-0 xl:text-xl",
           ],
           countyName: "county", // 指定城市 select name
           districtName: "district", // 指定地區 select name
@@ -1322,15 +1545,11 @@
         }
 
         function toggleFooterVisibility() {
-          if (window.innerWidth >= 992) {
-            return;
-          }
-
           const kvHeight = $("#section-1").height();
           const threshold = kvHeight * 0.55;
           const scrollTop = $(window).scrollTop();
 
-          if (scrollTop > threshold) {
+          if (isMobile && scrollTop > threshold) {
             $("footer").show();
           } else {
             $("footer").hide();
@@ -1350,6 +1569,12 @@
         // 初始检查
         toggleFooterVisibility();
         listenOnScreen();
+
+        if (isMobile) {
+          // 案名在正中間
+          $("#section-2").scrollLeft(655);
+          $("#section-5").scrollLeft(580);
+        }
       });
     </script>
   </body>
