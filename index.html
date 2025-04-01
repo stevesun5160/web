@@ -6,10 +6,8 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -33,18 +31,19 @@
       :root {
         --main-color: #8c7c52;
         --sub-color: #ac826d;
-        --font-sans:
-          "Noto Sans TC", "FangSong", "NSimSun", "LiSong Pro Light",
-          "Apple LiSung Light", sans-serif;
         --font-serif:
           "Noto Serif", "Georgia", "Times New Roman", "LiSu", "PMingLiU", serif;
-        --font-CenturyGothic:
-          "Century Gothic", "Noto Serif", "Roboto", "Lora", sans-serif;
+        --font-number: "Source Serif";
 
         max-height: 100dvh;
         width: 100%;
         overflow-x: hidden;
         font-family: var(--font-serif);
+      }
+
+      .font-number {
+        font-family: var(--font-number);
+        letter-spacing: 0.1em;
       }
 
       .animate-fade {
@@ -308,10 +307,15 @@
         >
           <img src="./assets/img/路網.webp" alt="路網" />
           <h3
-            class="absolute bottom-0 right-0 text-end text-2xl font-thin text-[var(--main-color)] xl:text-4xl xl:leading-snug"
+            class="absolute bottom-[15%] right-0 text-end text-2xl font-thin text-[var(--main-color)] xl:text-4xl xl:leading-snug"
           >
             Magnificent<br />Project
           </h3>
+          <p
+            class="mt-6 flex gap-1.5 px-2 text-sm text-gray-600 before:mt-2 before:size-1.5 before:shrink-0 before:rounded-full before:bg-gray-600 before:content-[''] xl:mt-4 xl:text-start"
+          >
+            本圖示內容為簡易區域說明，實際圈內之土地、道路、公共建設、溝渠之比例、位置、形狀、面積已政府都市計畫與地籍騰本記載為準
+          </p>
         </div>
       </section>
 
@@ -529,12 +533,12 @@
           >
             <div class="relative">
               <img
-                src="./assets/img/陽⼤醫院蘭陽分院⼆期.webp"
+                src="./assets/img/陽大醫院.webp"
                 alt="陽⼤醫院蘭陽分院⼆期"
                 class="aspect-[5/3] object-center"
               />
               <span class="absolute bottom-0 right-0 p-1 text-white">
-                陽大醫院
+                陽大醫院二期示意圖
               </span>
             </div>
             <h3 class="mt-6 text-2xl text-[var(--main-color)]">
@@ -547,10 +551,7 @@
         </div>
       </section>
 
-      <section
-        id="section-5"
-        class="overflow-x-auto bg-[url('./assets/img/bg.webp')]"
-      >
+      <section id="section-5" class="overflow-x-auto">
         <div class="relative size-full min-w-[1200px]">
           <img
             data-aos="fade"
@@ -569,6 +570,11 @@
               class="animate-fade sticky left-1/2 top-1/2 size-16 -translate-x-1/2 -translate-y-1/2"
             />
           </div>
+          <p
+            class="flex gap-1.5 px-2 py-1.5 text-center text-sm text-gray-600 before:mt-2 before:size-1.5 before:rounded-full before:bg-gray-600 before:content-[''] xl:text-start"
+          >
+            本圖示內容為簡易區域說明，實際圈內之土地、道路、公共建設、溝渠之比例、位置、形狀、面積已政府都市計畫與地籍騰本記載為準
+          </p>
         </div>
       </section>
 
@@ -863,34 +869,41 @@
         </div>
       </section>
 
-      <section id="section-7" class="relative">
-        <img
-          src="./assets/img/master-architect.webp"
-          alt="非凡地標鉅座"
-          class="min-h-screen object-cover object-center"
-        />
-        <div
-          class="absolute inset-0 flex items-center justify-center bg-black/40 tracking-widest text-white xl:static xl:bg-transparent"
-        >
-          <div>
-            <h2
-              data-aos="fade-up"
-              data-aos-delay="300"
-              data-aos-anchor="#section-7"
-              class="text-vertical mb-10 text-center text-5xl font-bold lg:mb-16 lg:text-[6rem] xl:absolute xl:right-[22dvw] xl:top-[10dvh] xl:text-5xl"
-            >
-              非凡地標鉅座
-            </h2>
-            <p
-              data-aos="fade-up"
-              data-aos-delay="300"
-              data-aos-anchor="#section-7"
-              class="text-center text-3xl lg:text-5xl xl:absolute xl:left-[20dvw] xl:top-[40dvh] xl:text-start xl:text-4xl xl:font-extralight xl:leading-snug"
-            >
-              Master <br class="hidden xl:inline" />Architect
-            </p>
+      <section id="section-7">
+        <div class="relative">
+          <img
+            src="./assets/img/master-architect.webp"
+            alt="非凡地標鉅座"
+            class="min-h-screen object-cover object-center"
+          />
+          <div
+            class="absolute inset-0 flex items-center justify-center bg-black/40 tracking-widest text-white xl:static xl:bg-transparent"
+          >
+            <div>
+              <h2
+                data-aos="fade-up"
+                data-aos-delay="300"
+                data-aos-anchor="#section-7"
+                class="text-vertical mb-10 text-center text-5xl font-bold lg:mb-16 lg:text-[6rem] xl:absolute xl:right-[22dvw] xl:top-[10dvh] xl:text-5xl"
+              >
+                非凡地標鉅座
+              </h2>
+              <p
+                data-aos="fade-up"
+                data-aos-delay="300"
+                data-aos-anchor="#section-7"
+                class="text-center text-3xl lg:text-5xl xl:absolute xl:left-[20dvw] xl:top-[40dvh] xl:text-start xl:text-4xl xl:font-extralight xl:leading-snug"
+              >
+                Master <br class="hidden xl:inline" />Architect
+              </p>
+            </div>
           </div>
         </div>
+        <p
+          class="flex gap-1.5 px-2 py-1.5 text-sm text-gray-600 before:mt-2 before:size-1.5 before:shrink-0 before:rounded-full before:bg-gray-600 before:content-[''] xl:text-start"
+        >
+          此為3D透視情景示意圖，實際環境須以現場實景為準
+        </p>
       </section>
 
       <section id="section-8" class="main-section">
@@ -940,12 +953,12 @@
                 <div class="swiper-slide relative aspect-[3/4] size-full">
                   <img
                     src="./assets/img/宏普GRAND PARK.webp"
-                    alt="宏普GRAND PARK"
+                    alt="宏普GRAND PARK II"
                     class="absolute inset-0 size-full object-cover object-center"
                     loading="lazy"
                   />
                   <span class="absolute bottom-0 left-0 p-1 text-white">
-                    宏普GRAND PARK
+                    宏普GRAND PARK II
                   </span>
                 </div>
                 <div class="swiper-slide relative aspect-[3/4] size-full">
@@ -1057,7 +1070,7 @@
                   alt="建築師 蕭家福"
                   class="aspect-square object-cover object-center xl:aspect-[2/3] xl:grow xl:object-[60%_0]"
                 />
-                <p class="hidden text-end xl:block">建築師 蕭家福</p>
+                <p class="py-1 text-end xl:py-0">建築師 蕭家福</p>
               </div>
               <div class="order-last mt-4 xl:hidden">
                 <div id="swiper-7-1-mobile" class="swiper size-full">
@@ -1162,7 +1175,7 @@
                   alt="景觀設計師 許行研"
                   class="aspect-square object-cover object-center xl:aspect-[2/3] xl:grow"
                 />
-                <p class="hidden text-end xl:block">景觀設計師 許行研</p>
+                <p class="py-1 text-end xl:py-0">景觀設計師 許行研</p>
               </div>
               <div class="order-last mt-4 xl:hidden">
                 <div id="swiper-7-2-mobile" class="swiper size-full">
@@ -1170,12 +1183,12 @@
                     <div class="swiper-slide relative aspect-[3/4] size-full">
                       <img
                         src="./assets/img/宏普GRAND PARK.webp"
-                        alt="宏普GRAND PARK"
+                        alt="宏普GRAND PARK II"
                         class="absolute inset-0 size-full object-cover object-center"
                         loading="lazy"
                       />
                       <span class="absolute bottom-0 left-0 p-1 text-white">
-                        宏普GRAND PARK
+                        宏普GRAND PARK II
                       </span>
                     </div>
                     <div class="swiper-slide relative aspect-[3/4] size-full">
@@ -1279,10 +1292,12 @@
               <li>景觀設計｜菁根景觀設計有限公司</li>
               <li>行銷企劃｜程現有限公司</li>
               <li>建案類型｜預售屋</li>
-              <li>樓層規劃｜14F/B3</li>
-              <li>坪數規劃｜25-37坪</li>
-              <li>接待會館｜宜蘭市聖後街53號</li>
-              <li>貴賓專線｜03-9325688</li>
+              <li>樓層規劃｜<span class="font-number">14F/B3</span></li>
+              <li>坪數規劃｜<span class="font-number">25-37</span>坪</li>
+              <li>
+                接待會館｜宜蘭市聖後街<span class="font-number">53</span>號
+              </li>
+              <li>貴賓專線｜<span class="font-number">03-9325688</span></li>
             </ul>
             <iframe
               class="mb-10 aspect-square w-full lg:aspect-video xl:mb-0"
