@@ -449,7 +449,7 @@
             </button>
             <div class="swiper-2-slide-content mt-6">
               <h3 class="text-2xl text-[var(--main-color)]">宜蘭火車站450米</h3>
-              <p class="py-3 text-lg xl:pb-0 xl:leading-loose">
+              <p class="min-h-[96px] py-3 text-lg xl:pb-0 xl:leading-loose">
                 ⽩強號約70分鐘達南港，全台路網無縫接軌，移動⾃由無遠弗届
               </p>
             </div>
@@ -457,7 +457,7 @@
               <h3 class="text-2xl text-[var(--main-color)]">
                 台鐵高架化（預計2034年完工）
               </h3>
-              <p class="py-3 text-lg xl:pb-0 xl:leading-loose">
+              <p class="min-h-[96px] py-3 text-lg xl:pb-0 xl:leading-loose">
                 縫合鐵道兩側，貫通宜蘭東、西兩區交通動脈，商圈共榮開展大城格局
               </p>
             </div>
@@ -1520,11 +1520,13 @@
           const swiper = new Swiper(elSelector, {
             loop: true,
             allowTouchMove: false,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+            },
           });
 
-          $(btnSelector).click(() => {
-            swiper.slideNext();
-
+          swiper.on("slideChange", () => {
             if (!contentSelector) {
               return;
             }
@@ -1533,6 +1535,10 @@
 
             const target = $(contentSelector).get(swiper.realIndex);
             $(target).show();
+          });
+
+          $(btnSelector).click(() => {
+            swiper.slideNext();
           });
         }
 
@@ -1620,7 +1626,7 @@
 
         if (isMobile) {
           // 案名在正中間
-          $("#section-2").scrollLeft(655);
+          $("#section-2").scrollLeft(660);
           $("#section-5").scrollLeft(570);
         }
       });
